@@ -1,0 +1,80 @@
+/* 🔘 Submit Button Styling */
+#submit {
+    position: relative; /* Hover arrow ke liye */
+    background-color: black;
+    transition: all 0.1s ease; /* Smooth animation on hover */
+    padding: 10px 20px; /* Corrected padding (comma hataya) */
+    box-sizing: border-box; /* Padding & border ko box width me include karta hai */
+}
+
+/* 🔁 Submit Button Hover Effect */
+#submit:hover {
+    border-radius: 0 !important; /* Sharp corners on hover */
+    padding-right: 30px; /* Space for arrow icon */
+    transform: scale(1.03) !important; /* Slight zoom effect */
+}
+
+/* ➡️ Arrow Appears on Hover */
+#submit:hover::after {
+    content: "→"; /* Arrow symbol */
+    position: absolute;
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the arrow */
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* 🧱 Main Container Styling */
+#main-container {
+    box-sizing: border-box !important; /* Consistent sizing */
+}
+
+/* 🧾 Input Field Styling */
+input {
+    border: 1px solid transparent !important; /* Default border hidden */
+    transition: all 0.3s ease; /* Smooth border animation */
+}
+
+/* 🔲 Input Field Hover Effect */
+input:hover {
+    border-color: black !important; /* Black border on hover */
+}
+
+/* 🔘 Google Button (Unfinished styling) */
+#google {
+    /* ⚠️ Fix this line - Incorrect syntax used */
+    /* transform: transition 0.1s ease; --> This line has wrong syntax */
+    /* Correct way: use 'transition' property separately */
+    transition: transform 0.1s ease;
+}
+
+/* 💡 Google Button Hover Effect */
+#google:hover {
+    border: 1px solid rgb(192, 190, 190) !important; /* Light gray border */
+    
+    /* Optional styles you might enable later: */
+    /* background-color: #04c0ff !important; */
+    /* color: white !important; */
+    /* border: none !important; */
+    /* transform: scale(1.02) !important; */
+}
+
+/* 📦 Ensure consistent sizing for inputs and buttons */
+input, button {
+    box-sizing: border-box !important;
+}
+
+/* ✅ Success Alert Animation (Initially hidden) */
+.alert-success {
+    opacity: 0; /* Hidden by default */
+    transform: translateY(-20px); /* Moves upward slightly */
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in; /* Entry animation */
+}
+
+/* ✅ Show Success Alert (With fade-in and drop-down animation) */
+.alert-success.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Original position */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Exit animation */
+}
